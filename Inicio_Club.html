@@ -192,7 +192,35 @@
             -webkit-transition: opacity 400ms ease-in;
             -moz-transition: opacity 400ms ease-in;
             transition: opacity 400ms ease-in;
+
         }
+        .modalDialog p{
+            font-size: 130%;
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+            background-color: white;
+            text-justify:initial
+
+        }
+        .modalDialog p:first-letter{
+            font-size: 100%;
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(0, 0, 0);
+            background-color: white;
+            padding-left: none;
+            padding-right: none;
+            text-justify:initial
+
+        }
+
+
+
+
+
+
+       
 
         .close {
             background: #606061;
@@ -249,13 +277,13 @@
     <a class="miboton" href="#openModal">Contacta</a>
 
     <div id="openModal" class="modalDialog">
-        <div >
+        <div class="contacto" >
             <a href="#close" title="Close" class="close">X</a>
             <h2>Drakkars contigo:</h2>
-            <p>Correo:</p>
+            <p>Nuestro Correo:</p>
             <p> malagadrakkarsesports@gmail.com</p>
             <p><a href="mailto:malagadrakkarsesports@gmail.com">
-                    Nuestro correo</a></p>
+                    Envianos un correo</a></p>
 
         </div>
 </body>
