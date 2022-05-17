@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="es"
->
+<html lang="es">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bordes_Colores_Imagenes</title>
- 
+
 <head>
     <meta charset="UTF-8">
 
     <title>1ºpaginaweb</title>
 
-    
+
     <style>
-    @font-face{
-        src:url(vikingn.ttf) ;
-        font-family: 'vikings';
-    }
+        @font-face {
+            src: url(vikingn.ttf);
+            font-family: 'vikings';
+        }
+
         /*el estarisco se utiliza pra pomer un formato genericol*/
         * {
             padding: 5px;
             box-sizing: border-box;
         }
+
         a:link {
-            color: rgb(9, 0, 128);
+            color: rgb(255, 0, 0);
         }
 
 
         a:visited {
-            color: green;
+            color: rgb(0, 10, 0);
         }
 
 
         a:hover {
-            color: red;
+            color: rgb(252, 247, 247);
         }
 
 
@@ -42,23 +43,32 @@
         }
 
         body {
-            background-image:url(fondo.jpg) ;
+            background-image: url(fondo.jpg);
             background-repeat: no-repeat;
-            overflow:scroll;
+            overflow: scroll;
             background-size: 150%;
         }
 
 
         h1 {
-            
+
             text-align: center;
-        font: 500%  black;
-        font-family: 'Vikings';
-       
-      
+            font: 500% black;
+            font-family: 'Vikings';
+            text-decoration: underline rgb(0, 132, 255);
+            text-shadow: 10px 10px 10px rgb(255, 255, 255);
+
+
         }
 
-     
+ 
+
+
+
+        #caja1:hover {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
 
         #caja1 {
             width: 100pt;
@@ -75,64 +85,84 @@
         img {
             width: 100pt;
             height: 100pt;
-         
+
         }
 
-        
+        p {
 
-     
+            color: black;
+            transition: all 1.5s ease;
+            /* defino transiciones para notarlas siempre */
+            -webkit-transition: all 1.5s ease;
+            padding-bottom: 4%;
+        }
+
+
+        p:hover {
+            color: black;
+            text-shadow: 1px 1px 3px rgb(8, 132, 248);
+            background-color: rgb(211, 203, 203);
+            font: bold;
+            border-radius: 25px;
+            border-radius: 25% 50%;
+            border-radius: 50px 25px 10px;
+            border-radius: 25px 0 15px 50px;
+
+
+        }
+
+        p::before {
+            transition: all 1.5s ease;
+            /* defino transiciones para notarlas siempre */
+            -webkit-transition: all 1.5s ease;
+        }
+
+        p:hover::before {
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
 
         p:nth-child(1) {
-            
+
             text-justify: auto;
             padding-left: 100px;
             padding-right: 100px;
-            background-color: white;
-            font: 140%  black;
-            font:Arial;
-        }
-        p:nth-child(2) {
-            background-color: black;
-           
-            
-            
-        }
-        p:nth-child(3) {
-            
-            text-justify: auto;
-            padding-left: 100px;
-            padding-right: 100px;
-            background-color: white;
-            font: 140%  black;
-            font:Arial;
+            font: 140% black;
+            font: Arial;
         }
 
-        p:nth-child(4) {
-            background-color: black;
-          
-            
-            
-        }
-        p:nth-child(5) {
-            
+
+        p:nth-child(2) {
+
             text-justify: auto;
             padding-left: 100px;
             padding-right: 100px;
-            background-color: white;
-            font: 140%  black;
-            font:Arial;
-            
+
+            font: 140% black;
+            font: Arial;
+
         }
+
+        #contenedor {
+            background-color: rgb(201, 229, 235);
+            margin-bottom: 4%;
+            border-radius: 25px;
+            border-radius: 25% 50%;
+            border-radius: 50px 25px 10px;
+            border-radius: 25px 0 15px 50px;
+        }
+
         p::first-letter {
             font-size: 400%;
             font-weight: bold;
             font-style: italic;
             color: black
         }
-  
-        
+
+
         .miboton {
-           
+
             padding: 15px 25px;
             font-size: 24px;
             cursor: pointer;
@@ -144,22 +174,19 @@
             border: none;
             border-radius: 15px;
             box-shadow: 0 9px #999;
-           margin-left: 45%;
-           font-family: 'Vikings';
+            margin-left: 45%;
+            font-family: 'Vikings';
         }
 
         .miboton:hover {
             background-color: #00fff2
-            
-            
-            
         }
 
         .miboton:active {
             background-color: #00fff2;
             box-shadow: 0 5px #666;
             transform: translateY(4px);
-           
+
         }
 
         .modalDialog {
@@ -187,44 +214,35 @@
             width: 400px;
             position: relative;
             margin: 10% auto;
-            padding: 5px 20px 13px 20px;
+            padding: 2px 20px 7px 20px;
             border-radius: 10px;
-            background: #fff;
-            background: -moz-linear-gradient(#fff, #999);
-            background: -webkit-linear-gradient(#fff, #999);
-            background: -o-linear-gradient(#fff, #999);
+            background-image: linear-gradient(270deg, rgb(30, 160, 18), rgb(30, 160, 18), rgb(195, 12, 231));
             -webkit-transition: opacity 400ms ease-in;
             -moz-transition: opacity 400ms ease-in;
             transition: opacity 400ms ease-in;
 
         }
-        .modalDialog p{
+
+        .modalDialog p {
             font-size: 120%;
             font-weight: bold;
             font-style: italic;
             color: rgb(0, 0, 0);
-            background-color: white;
-            text-justify:initial
-
+            background-color: none;
+            text-justify: initial
         }
-        .modalDialog p:first-letter{
+
+        .modalDialog p:first-letter {
             font-size: 100%;
             font-weight: bold;
             font-style: italic;
             color: rgb(0, 0, 0);
-            background-color: white;
+            background-color: none;
             padding-left: none;
             padding-right: none;
-            text-justify:initial
-
+            text-justify: initial
         }
 
-
-
-
-
-
-       
 
         .close {
             background: #606061;
@@ -249,45 +267,61 @@
             background: #00d9ff;
         }
         
+        .contacto p::first-letter{
+            font-size: 100%;
+            font-style: italic;
+        }
+        #correo::first-letter{
+            color:red;
+        }
+
+        #correo :hover::first-letter{
+            color:rgb(255, 255, 255);
+        }
+        h2{
+            color:white;
+            font-family: 'Vikings';
+        }
+
     </style>
 </head>
 
 <body>
 
-<div id="caja1"><img src="logoletras.png" alt="drakkars">
-</div>
-    <h1>Club Malaga Drakkars Esports </h1>
-<div>
-    <p>Mi nombre es alejadro lopez gomez, tengo 2 hijos, Alejandro Lopez Salinas de 4 años y Lucia Lopez Salinas de
-        nuebe años.Son muy buenos estudiantes, les gusta jugar,son un poquito trabiesillos y son lo mejor de mi vida.
-        - Lo primero es CONFIAR EN TI MISMO. Confía en ti mismo sin importar los que los demás piensen
-        2 - Lo segundo que debes hacer es ROMER ALGUNAS NORMAS.
-        Tenemos demasiadas normas en la vida para casi
-        todo Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus aspernatur non repellendus
-        libero vel facilis quibusdam adipisci accusamus reiciendis pariatur, architecto culpa incidunt sapiente alias
-        laborum ipsa? Ipsa, placeat. </p>
-<p></p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
-        veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
-        accusamus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
-        veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
-        accusamus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
-        veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
-        accusamus!</p>
-<p></p>
+    <div id="caja1"><img src="logoletras.png" alt="drakkars">
+    </div>
+    <h1 id="Titulo">Club Malaga Drakkars Esports </h1>
+    <div id="contenedor">
+        <p>Mi nombre es alejadro lopez gomez, tengo 2 hijos, Alejandro Lopez Salinas de 4 años y Lucia Lopez Salinas de
+            nuebe años.Son muy buenos estudiantes, les gusta jugar,son un poquito trabiesillos y son lo mejor de mi
+            vida.
+            - Lo primero es CONFIAR EN TI MISMO. Confía en ti mismo sin importar los que los demás piensen
+            2 - Lo segundo que debes hacer es ROMER ALGUNAS NORMAS.
+            Tenemos demasiadas normas en la vida para casi
+            todo Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus aspernatur non
+            repellendus
+            libero vel facilis quibusdam adipisci accusamus reiciendis pariatur, architecto culpa incidunt sapiente
+            alias
+            laborum ipsa? Ipsa, placeat. </p>
 
-       
-    </div >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
+            veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
+            accusamus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
+            veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
+            accusamus!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum eum qui? Quasi hic,
+            veritatis cupiditate soluta sunt et molestias non adipisci ullam obcaecati magnam quis eum dolorem, cumque
+            accusamus!</p>
+    </div>
     <a class="miboton" href="#openModal">Contacta</a>
 
     <div id="openModal" class="modalDialog">
-        <div class="contacto" >
+        <div class="contacto">
             <a href="#close" title="Close" class="close">X</a>
             <h2>Drakkars contigo:</h2>
             <p>Nuestro Correo:</p>
             <p> malagadrakkarsesports@gmail.com</p>
-            <p><a href="mailto:malagadrakkarsesports@gmail.com">
-                    Envianos un correo</a></p>
+            <p id="correo"><a href="mailto:malagadrakkarsesports@gmail.com">
+                    Envianos un correo      </a></p>
 
         </div>
 </body>
