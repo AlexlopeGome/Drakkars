@@ -47,6 +47,11 @@
             background-size: 150%;
         }
 
+        .cajasubtituo {
+         
+            margin-top: 5%;
+
+        }
 
         .mititulo {
 
@@ -59,37 +64,39 @@
         }
 
         h2 {
-    text-align: center;
-    margin-top: 100px;
-    text-shadow: 5px 5px 10px rgb(17, 0, 255);
-    font: 250% black;
-    animation-name: logoAnimation;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: initial;
+            text-align: center;
+            
+            margin-top: 100px;
+            text-shadow: 5px 5px 10px rgb(17, 0, 255);
+            font: 290% black;
+            animation-name: logoAnimation;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: initial;
 
-}
-@keyframes logoAnimation {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
+        }
 
-    20%,
-    80% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+        @keyframes logoAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
 
-    100% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-}
+            20%,
+            80% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+        }
 
         .flip-box-inner {
             position: relative;
@@ -147,6 +154,7 @@
         img {
             width: 110px;
             height: 110px;
+         
 
         }
 
@@ -392,6 +400,42 @@
             font-family: 'Vikings';
 
         }
+
+        .marcoFoto {
+
+            overflow: hidden;
+            /*esta propiedad evita que la imagen ocupe mas espacio que su contenedor*/
+            width: 33%;
+            border: 5px solid #FFF;
+            box-sizing: border-box;
+            float: left;
+            margin-left: 32%;
+           
+
+         
+
+        }
+
+        .marcoFoto img {
+
+            transition: all .4s ease;
+            width: 100%;
+            
+
+        }
+
+        .marcoFoto img:hover {
+
+            transform: scale(1.5) rotate(20deg);
+        }
+
+        .contenedor {
+           
+            margin: 100px auto;
+            max-width: 960px;
+            width: 100%;
+          
+        }
     </style>
 </head>
 
@@ -414,7 +458,15 @@
 
 
     <h1 class="mititulo">Club Malaga Drakkars Esports </h1>
-    <h2 class="misubtitulo">Esto es lo que consideramos la base de nuestro Club FIGG</h2>
+
+    <div class="marcoFoto">
+        <img src="Drakkaslogomalaga.jpg" alt="Imagen Zoom CSS">
+    </div>
+    <div class="cajasubtituo">
+        <h2 class="misubtitulo">Esto es lo que consideramos la base de nuestro Club FIGG</h2>
+
+    </div>
+
     <div id="contenedor">
 
         <p>Facilitar la estructura de crecimiento, trabajo en equipo e inclusión para los/las jugadores/as de eSports
