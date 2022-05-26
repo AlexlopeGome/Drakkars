@@ -10,6 +10,7 @@
 
 
     <style>
+        /*Impota la la fuente q se encuentra en misma carpeta del archivo html*/
         @font-face {
             src: url(vikingn.ttf);
             font-family: 'vikings';
@@ -21,25 +22,27 @@
             box-sizing: border-box;
         }
 
+        /*color del link de un elemeto a*/
         a:link {
             color: rgb(255, 0, 0);
         }
 
-
+        /*color visible  de un elemeto a*/
         a:visited {
             color: rgb(0, 10, 0);
         }
 
-
+        /*color cuando esta el raton en un elemto a */
         a:hover {
             color: rgb(252, 247, 247);
         }
 
-
+        /*color cuando clicqueas  elemto a */
         a:active {
             color: yellow;
         }
 
+        /*caracteristicas del body*/
         body {
             background-image: url(fondo.jpg);
             background-repeat: no-repeat;
@@ -47,12 +50,14 @@
             background-size: 150%;
         }
 
+        /*caracteristicas del div que contiene el subtitulo q se le a dado las clase cajaSubtitulo*/
         .cajasubtituo {
-         
+
             margin-top: 5%;
 
         }
 
+        /*caracteristicas del titulo q para darle masyoy preferencia se a defibido con la clase mititulo*/
         .mititulo {
 
             text-align: center;
@@ -63,9 +68,9 @@
 
         }
 
+        /*efecto de cine de esconderse y aparecer junto a las caracteristicas que  se le aplica a todos los elemetos h2*/
         h2 {
             text-align: center;
-            
             margin-top: 100px;
             text-shadow: 5px 5px 10px rgb(17, 0, 255);
             font: 290% black;
@@ -80,6 +85,7 @@
 
         }
 
+        /*Esto es lo necesario parea la animacion aplicada a los h2*/
         @keyframes logoAnimation {
             0% {
                 opacity: 0;
@@ -98,6 +104,7 @@
             }
         }
 
+        /*todo lo necesario para aplicar el efecto de cara al  logotipo superior comienza */
         .flip-box-inner {
             position: relative;
             width: 100%;
@@ -129,7 +136,7 @@
             color: black;
         }
 
-        /* Style the back side */
+
         .flip-box-back {
             background-color: none;
             color: white;
@@ -148,13 +155,15 @@
             height: 130px;
             border: 1px solid #f1f1f1;
             perspective: 1000px;
-
+            /*termanacion de lo necesario para el efecto carta*/
         }
 
+
+        /*carcteristicas del elemeto img*/
         img {
             width: 110px;
             height: 110px;
-         
+
 
         }
 
@@ -165,10 +174,12 @@
             /* defino transiciones para notarlas siempre */
             -webkit-transition: all 1.5s ease;
             padding-bottom: 4%;
+            margin-left: 7%;
         }
 
 
         p:hover {
+            /* defino transiciones para notarlas cuando paso el raton siempre */
             color: black;
             text-shadow: 1px 1px 3px rgb(8, 132, 248);
             background-color: rgb(211, 203, 203);
@@ -187,53 +198,13 @@
             -webkit-transition: all 1.5s ease;
         }
 
-        p:hover::before {
-            background-color: rgb(255, 255, 255);
-            color: black;
-        }
 
 
-        p:nth-child(1) {
-
-            text-justify: auto;
-            padding-left: 110px;
-            padding-right: 100px;
-            font: 110% black;
-            font: Arial;
-        }
 
 
-        p:nth-child(2) {
-
-            text-justify: auto;
-            padding-left: 110px;
-            padding-right: 100px;
-            font: 110% black;
-            font: Arial;
-
-        }
-
-        p:nth-child(3) {
-
-            text-justify: auto;
-            padding-left: 110px;
-            padding-right: 100px;
-            font: 110% black;
-            font: Arial;
-
-        }
-
-        p:nth-child(4) {
-
-            text-justify: auto;
-            padding-left: 110px;
-            padding-right: 100px;
-            font: 110% black;
-            font: Arial;
-
-        }
 
         #contenedor {
+            /* defino transiciones para el div que contiene el logotipo */
             background-color: rgb(201, 229, 235);
             margin-bottom: 4%;
             border-radius: 25px;
@@ -243,6 +214,7 @@
         }
 
         p::first-letter {
+            /* defino transiciones para el primera letra de los elemtos p*/
             font-size: 200%;
             font-weight: bold;
             font-style: italic;
@@ -251,7 +223,7 @@
 
 
         .miboton {
-
+            /* defino transiciones del boton que tendra simepre*/
             padding: 15px 25px;
             font-size: 24px;
             cursor: pointer;
@@ -268,10 +240,12 @@
         }
 
         .miboton:hover {
+            /* defino transiciones del boton que tendra simepre que este el raton incima*/
             background-color: #00fff2
         }
 
         .miboton:active {
+            /* defino transiciones del boton que tendra simepre que haga clic*/
             background-color: #00fff2;
             box-shadow: 0 5px #666;
             transform: translateY(4px);
@@ -279,6 +253,7 @@
         }
 
         .modalDialog {
+            /* defino transiciones  de la pantalla modal*/
             position: fixed;
             font-family: Arial, Helvetica, sans-serif;
             top: 0;
@@ -295,11 +270,13 @@
         }
 
         .modalDialog:target {
+            /* defino transiciones  de la pantalla modal*/
             opacity: 1;
             pointer-events: auto;
         }
 
         .modalDialog>div {
+            /* defino transiciones  de la pantalla modal cuando esta por encima del div*/
             width: 400px;
             position: relative;
             margin: 10% auto;
@@ -313,6 +290,7 @@
         }
 
         .modalDialog p {
+            /* defino transiciones de los elemtosp de la patala modal de la pantalla modal*/
             font-size: 120%;
             font-weight: bold;
             font-style: italic;
@@ -321,19 +299,10 @@
             text-justify: initial
         }
 
-        .modalDialog p:first-letter {
-            font-size: 100%;
-            font-weight: bold;
-            font-style: italic;
-            color: rgb(0, 0, 0);
-            background-color: none;
-            padding-left: none;
-            padding-right: none;
-            text-justify: initial
-        }
 
 
         .close {
+            /* defino transiciones del boton close (X) simepre*/
             background: #606061;
             color: #FFFFFF;
             line-height: 25px;
@@ -353,30 +322,26 @@
         }
 
         .close:hover {
+            /* defino transiciones del boton close (X) cuando se pasa el raton por encima*/
             background: #00d9ff;
         }
 
         .contacto p::first-letter {
+            /* defino transiciones de la primera letra del contato dela pantalla  modal*/
             font-size: 100%;
-            font-style: italic;
-        }
-
-        #correo::first-letter {
             color: red;
-        }
-
-        #correo :hover::first-letter {
-            color: rgb(255, 255, 255);
         }
 
 
         i {
+            /* defino transiciones de los elemtos i en la pantalla  modal*/
             color: black;
             font-size: 100%;
             font-weight: bold;
         }
 
         b {
+            /* defino transiciones que se la aplican el elemto b */
             color: white;
             font-size: 90%;
             font-weight: bold;
@@ -410,31 +375,31 @@
             box-sizing: border-box;
             float: left;
             margin-left: 32%;
-           
 
-         
+
+
 
         }
 
         .marcoFoto img {
-
+            /*transicion para la duracion del efecto*/
             transition: all .4s ease;
             width: 100%;
-            
+
 
         }
 
         .marcoFoto img:hover {
-
+            /*transicion para la rotacion  del efecto cuando se la pasa la imagen el el raton*/
             transform: scale(1.5) rotate(20deg);
         }
 
         .contenedor {
-           
+            /*difino las transiciones q tendra siempre el contenedor*/
             margin: 100px auto;
             max-width: 960px;
             width: 100%;
-          
+
         }
     </style>
 </head>
